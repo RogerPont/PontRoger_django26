@@ -1,0 +1,60 @@
+[2026-05-19 19:43:51] INFO in autoreload: Watching for file changes with StatReloader
+[2026-05-19 19:43:52] INFO in basehttp: "GET / HTTP/1.1" 200 5944
+[2026-05-19 19:43:53] INFO in basehttp: "GET /static/blog/styles.css HTTP/1.1" 200 11829
+[2026-05-19 19:43:53] INFO in basehttp: "GET /static/blog/images/django-setup.jpg HTTP/1.1" 200 48066
+[2026-05-19 19:43:53] INFO in basehttp: "GET /static/blog/images/db-optimization.jpg HTTP/1.1" 200 51363
+[2026-05-19 19:43:53] INFO in basehttp: "GET /static/blog/images/python-decorators.jpg HTTP/1.1" 200 50211
+[2026-05-19 19:44:04] WARNING in basehttp: "GET /favicon.ico HTTP/1.1" 404 4084
+[2026-05-19 19:44:11] INFO in basehttp: "GET /posts HTTP/1.1" 200 20201
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/clean-code.jpg HTTP/1.1" 200 45476
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/drf-api.jpg HTTP/1.1" 200 46434
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/git-workflows.jpg HTTP/1.1" 200 43972
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/postgresql-intro.jpg HTTP/1.1" 200 55139
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/django-cbv.jpg HTTP/1.1" 200 45101
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/security-basics.jpg HTTP/1.1" 200 50662
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/django-deploy.jpg HTTP/1.1" 200 52632
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/custom-user.jpg HTTP/1.1" 200 47452
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/js-django.jpg HTTP/1.1" 200 51184
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/master-django-admin.jpg HTTP/1.1" 200 53803
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/celery-redis.jpg HTTP/1.1" 200 48938
+[2026-05-19 19:44:11] INFO in basehttp: "GET /static/blog/images/django-testing.jpg HTTP/1.1" 200 45544
+[2026-05-19 19:44:11] INFO in basehttp: "GET /authors HTTP/1.1" 200 5168
+[2026-05-19 19:44:12] INFO in basehttp: "GET /tags HTTP/1.1" 200 4680
+[2026-05-19 19:44:13] INFO in basehttp: "GET / HTTP/1.1" 200 5944
+[2026-05-19 19:44:14] INFO in basehttp: "GET / HTTP/1.1" 200 5944
+[2026-05-19 19:46:37] INFO in autoreload: C:\Users\desco\FP\Programació\POO\B6 - Django\my_site\my_site\settings.py changed, reloading.
+[2026-05-19 19:46:38] INFO in autoreload: Watching for file changes with StatReloader
+[2026-05-19 19:49:02] INFO in autoreload: C:\Users\desco\FP\Programació\POO\B6 - Django\my_site\blog\views.py changed, reloading.
+[2026-05-19 19:49:04] INFO in autoreload: Watching for file changes with StatReloader
+[2026-05-19 19:49:17] INFO in autoreload: C:\Users\desco\FP\Programació\POO\B6 - Django\my_site\blog\views.py changed, reloading.
+[2026-05-19 19:49:18] INFO in autoreload: Watching for file changes with StatReloader
+[2026-05-19 19:49:48] INFO in autoreload: Watching for file changes with StatReloader
+[2026-05-19 19:49:48] ERROR in log: Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\desco\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desco\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desco\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desco\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desco\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\views\generic\list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desco\FP\Programació\POO\B6 - Django\my_site\blog\views.py", line 13, in get_queryset
+    raise ValueError("ERROR DE PROVA DEL BLOG DE ROGER!")
+ValueError: ERROR DE PROVA DEL BLOG DE ROGER!
+[2026-05-19 19:49:48] ERROR in basehttp: "GET / HTTP/1.1" 500 80289
+[2026-05-19 19:51:24] INFO in autoreload: C:\Users\desco\FP\Programació\POO\B6 - Django\my_site\blog\views.py changed, reloading.
+[2026-05-19 19:51:25] INFO in autoreload: Watching for file changes with StatReloader
+[2026-05-19 19:51:28] INFO in basehttp: "GET / HTTP/1.1" 200 5944
+[2026-05-19 19:51:28] INFO in basehttp: "GET /static/blog/images/django-setup.jpg HTTP/1.1" 304 0
+[2026-05-19 19:51:28] INFO in basehttp: "GET /static/blog/styles.css HTTP/1.1" 304 0
+[2026-05-19 19:51:28] INFO in basehttp: "GET /static/blog/images/db-optimization.jpg HTTP/1.1" 304 0
+[2026-05-19 19:51:28] INFO in basehttp: "GET /static/blog/images/python-decorators.jpg HTTP/1.1" 304 0
+[2026-05-19 19:51:44] INFO in autoreload: C:\Users\desco\FP\Programació\POO\B6 - Django\my_site\my_site\settings.py changed, reloading.

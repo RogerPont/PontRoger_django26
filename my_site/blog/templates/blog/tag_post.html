@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Posts amb etiqueta #{{ tag_name }} | RogerPont Blog{% endblock %}
+
+{% block content %}
+<section>
+    <div style="margin-bottom: 3rem;">
+        <span style="color: var(--accent-primary); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.15em; display: block; margin-bottom: 0.5rem;">Cerca per Etiqueta</span>
+        <h1 style="font-size: 2.8rem; font-weight: 800; letter-spacing: -0.02em;">Posts etiquetats amb <span style="background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">#{{ tag_name }}</span></h1>
+    </div>
+
+    <div class="posts-grid">
+        {% for post in posts %}
+            {% include "blog/includes/post.html" %}
+        {% empty %}
+            <p>No s'ha trobat cap post associat a aquesta etiqueta.</p>
+        {% endfor %}
+    </div>
+
+    <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+        <a href="{% url 'tags-page' %}" style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem; font-weight: 600;">
+            &larr; Tornar a totes les etiquetes
+        </a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Tots els Posts | RogerPont Blog{% endblock %}
+
+{% block content %}
+<section>
+    <h2 class="section-title">Totes les Publicacions</h2>
+    <p style="color: var(--text-secondary); margin-top: -1.5rem; margin-bottom: 2.5rem;">
+        Explora la llista completa de publicacions del blog ordenades de manera descendent per data.
+    </p>
+
+    <div class="posts-grid">
+        {% for post in all_posts %}
+            {% include "blog/includes/post.html" %}
+        {% empty %}
+            <p>No hi ha publicacions disponibles de moment.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

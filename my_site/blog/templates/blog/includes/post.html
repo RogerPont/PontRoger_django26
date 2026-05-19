@@ -1,0 +1,26 @@
+{% load static %}
+<article class="card">
+    <div class="card-img-wrapper">
+        <img src="{% static 'blog/images/' %}{{ post.image_name }}" alt="{{ post.title }}" class="card-img">
+    </div>
+    <div class="card-body">
+        <div class="card-meta">
+            <time>{{ post.date|date:"d M Y" }}</time>
+            <div class="tags-container" style="margin-bottom: 0;">
+                {% for tag in post.tags.all %}
+                    <span class="tag-badge" style="padding: 0.1rem 0.5rem; font-size: 0.7rem;">{{ tag.caption }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <h3 class="card-title">
+            <a href="{% url 'post-detail-page' post.slug %}">{{ post.title }}</a>
+        </h3>
+        <p class="card-excerpt">{{ post.excerpt }}</p>
+        <div class="card-footer">
+            <a href="{% url 'author-detail-page' post.author.id %}" class="card-author">
+                Per <strong>{{ post.author }}</strong>
+            </a>
+            <a href="{% url 'post-detail-page' post.slug %}" class="btn-read-more">Llegir més</a>
+        </div>
+    </div>
+</article>

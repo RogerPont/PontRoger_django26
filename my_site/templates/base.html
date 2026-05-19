@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}RogerPont Blog{% endblock %}</title>
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="{% url 'starting-page' %}" class="logo">RogerPont DevBlog</a>
+            <nav>
+                <ul>
+                    <li class="{% if request.resolver_match.url_name == 'starting-page' %}active{% endif %}">
+                        <a href="{% url 'starting-page' %}">Inici</a>
+                    </li>
+                    <li class="{% if request.resolver_match.url_name == 'posts-page' or request.resolver_match.url_name == 'post-detail-page' %}active{% endif %}">
+                        <a href="{% url 'posts-page' %}">Posts</a>
+                    </li>
+                    <li class="{% if request.resolver_match.url_name == 'authors-page' or request.resolver_match.url_name == 'author-detail-page' %}active{% endif %}">
+                        <a href="{% url 'authors-page' %}">Autors</a>
+                    </li>
+                    <li class="{% if request.resolver_match.url_name == 'tags-page' or request.resolver_match.url_name == 'tag-posts-page' %}active{% endif %}">
+                        <a href="{% url 'tags-page' %}">Etiquetes</a>
+                    </li>
+                    <li>
+                        <a href="/admin/" target="_blank" class="nav-admin-btn">Django Admin</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-logo">RogerPont DevBlog</div>
+        <p>&copy; 2026 Roger Pont. Tots els drets reservats. Projecte de Django - POO.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-muted);">
+            Lacetania FP · roger.pont.2173@lacetania.cat · <a href="https://github.com/RogerPont" target="_blank" style="text-decoration: underline;">GitHub</a>
+        </p>
+    </footer>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Inici | RogerPont Blog{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Benvinguts al meu <span>Blog de Desenvolupament</span></h1>
+    <p>Un espai on comparteixo el meu viatge d'aprenentatge en Python, programació orientada a objectes (POO) i desenvolupament web modern amb Django.</p>
+    <a href="{% url 'posts-page' %}" class="btn-primary">Explorar tots els posts</a>
+</section>
+
+<section>
+    <h2 class="section-title">Darreres Publicacions</h2>
+    
+    <div class="posts-grid">
+        {% for post in posts %}
+            {% include "blog/includes/post.html" %}
+        {% empty %}
+            <p>No s'ha trobat cap publicació. Assegura't de carregar els fixtures correctament!</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

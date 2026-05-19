@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Pàgina no trobada (404) | RogerPont Blog{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Ui! Pàgina no trobada</h1>
+    <p class="error-desc">Sembla que la ruta que estàs buscant no existeix o ha estat moguda a una altra ubicació. Si us plau, verifica l'adreça URL o torna a la pàgina d'inici.</p>
+    <a href="{% url 'starting-page' %}" class="btn-primary">Tornar a l'Inici</a>
+</div>
+{% endblock %}

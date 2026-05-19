@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ post.title }} | RogerPont Blog{% endblock %}
+
+{% block content %}
+<article class="detail-container">
+    <div class="detail-header">
+        <div class="detail-meta">
+            <time>Publicat el {{ post.date|date:"d \d\e F \d\e Y" }}</time>
+            <span>&bull;</span>
+            <a href="{% url 'author-detail-page' post.author.id %}" style="color: var(--accent-primary); font-weight: 600;">
+                Per {{ post.author }}
+            </a>
+        </div>
+        <h1 class="detail-title">{{ post.title }}</h1>
+        
+        <div class="tags-container" style="justify-content: center;">
+            {% for tag in post_tags %}
+                <a href="{% url 'tag-posts-page' tag.caption %}" class="tag-badge">{{ tag.caption }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="detail-hero-img-wrapper">
+        <img src="{% static 'blog/images/' %}{{ post.image_name }}" alt="{{ post.title }}" class="detail-hero-img">
+    </div>
+
+    <div class="detail-content">
+        <!-- Render post excerpt as a lead paragraph -->
+        <p style="font-size: 1.3rem; font-weight: 500; color: var(--text-primary); margin-bottom: 2rem; line-height: 1.6; border-left: 4px solid var(--accent-primary); padding-left: 1.5rem;">
+            {{ post.excerpt }}
+        </p>
+        
+        <!-- Render full post content -->
+        <div>
+            {{ post.content|linebreaks }}
+        </div>
+    </div>
+    
+    <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+        <a href="{% url 'posts-page' %}" style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem; font-weight: 600;">
+            &larr; Tornar a tots els posts
+        </a>
+        <a href="{% url 'author-detail-page' post.author.id %}" style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 0.75rem 1.5rem; border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+            Sobre l'autor &rarr;
+        </a>
+    </div>
+</article>
+{% endblock %}

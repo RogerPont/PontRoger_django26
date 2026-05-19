@@ -1,0 +1,33 @@
+======================================================================
+TIME: 19:49:48
+LEVEL: ERROR
+MODULE: log
+MESSAGE: [2026-05-19 19:49:48] ERROR in log: Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\desco\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desco\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desco\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desco\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desco\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\views\generic\list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desco\FP\Programació\POO\B6 - Django\my_site\blog\views.py", line 13, in get_queryset
+    raise ValueError("ERROR DE PROVA DEL BLOG DE ROGER!")
+ValueError: ERROR DE PROVA DEL BLOG DE ROGER!
+======================================================================
+
+======================================================================
+TIME: 19:49:48
+LEVEL: ERROR
+MODULE: basehttp
+MESSAGE: [2026-05-19 19:49:48] ERROR in basehttp: "GET / HTTP/1.1" 500 80289
+======================================================================
+

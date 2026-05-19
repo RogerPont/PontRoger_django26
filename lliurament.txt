@@ -1,0 +1,11 @@
+Lliurament del Projecte Django Blog - Bloc 6 POO i Persistència
+--------------------------------------------------------------
+
+Nom de l'alumne: Roger Pont (RogerPont)
+Correu electrònic: roger.pont.2173@lacetania.cat
+
+1. Enllaç al repositori de GitHub del projecte Django (públic):
+https://github.com/RogerPont/django-blog
+
+2. Enllaç al vídeo de presentació (màxim 10 minuts):
+[ENGANXA AQUÍ L'ENLLAÇ AL TEU VÍDEO - EX. GOOGLE DRIVE, YOUTUBE O ONEDRIVE]
