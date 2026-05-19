@@ -39,4 +39,5 @@ jobs:
     - name: Generate pydoc documentation
       run: |
         # Generate pydoc for blog app and display it
+        cd my_site
         python -m pydoc blog
