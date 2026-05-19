@@ -26,18 +26,26 @@ Aquest projecte consisteix en la creació d'un sistema de publicació de conting
 
 ---
 
-## 2. Instal·lació Ràpida
+## 2. Instal·lació Ràpida i Engegada Automàtica (Recomanada)
 
-Sigueu les següents indicacions per configurar i aixecar el projecte localment:
+Si estàs a **Windows**, el projecte inclou un script automatitzat que ho fa tot per tu:
+
+1. Fes doble clic sobre el fitxer **`iniciar_projecte.bat`** a l'arrel del directori.
+2. L'script detectarà automàticament si tens un entorn virtual (`venv` o `.venv`), el carregarà, comprovarà les dependències de **`requirements.txt`** (instal·lant-les si falten), aplicarà les migracions, carregarà les dades de prova (fixtures) i obrirà el teu navegador web directament al blog.
+
+---
+
+## 3. Instal·lació Manual (Altres Sistemes o Pas a Pas)
+
+Si prefereixes configurar-lo manualment o estàs a macOS/Linux, segueix aquests passos:
 
 ### Pas 1: Clonar el repositori
-Clona el repositori públic al teu ordinador:
 ```bash
-git clone https://github.com/RogerPont/my_site.git
-cd my_site
+git clone https://github.com/RogerPont/PontRoger_django26.git
+cd PontRoger_django26
 ```
 
-### Pas 2: Crear i activar l'entorn virtual (Opcional però recomanat)
+### Pas 2: Crear i activar l'entorn virtual
 ```bash
 python -m venv venv
 # A Windows:
@@ -46,29 +54,22 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-### Pas 3: Instal·lar les dependències
-Aquest projecte necessita Django i Pillow per processar les imatges de banner:
+### Pas 3: Instal·lar les dependències des de `requirements.txt`
 ```bash
-pip install django Pillow
+pip install -r requirements.txt
 ```
 
-### Pas 4: Executar les migracions de la base de dades
-Crea i aplica l'estructura de les taules a la base de dades SQLite local:
+### Pas 4: Executar les migracions i dades de prova (Fixtures)
+Entra a la carpeta del projecte Django, aplica l'estructura de la base de dades SQLite i pobla-la automàticament amb els més de 15 articles de prova:
 ```bash
 cd my_site
-python manage.py makemigrations
 python manage.py migrate
-```
-
-### Pas 5: Carregar les dades de prova (Fixtures)
-Carrega els 15+ posts, 5 autors i 5 tags de manera automàtica:
-```bash
 python manage.py loaddata blog/fixtures/initial_data.json
 ```
 
 ---
 
-## 3. Execució del Projecte
+## 4. Execució del Projecte
 
 Per arrencar el servidor de desenvolupament local de Django:
 
