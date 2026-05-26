@@ -1,0 +1,8 @@
+Lliurament del Projecte Django Blog - Bloc 6 POO i Persistència
+--------------------------------------------------------------
+
+1. Enllaç al repositori de GitHub del projecte Django (públic):
+https://github.com/RogerPont/PontRoger_django26.git
+
+2. Enllaç al vídeo de presentació:
+https://youtu.be/i2yq_8wuDTg

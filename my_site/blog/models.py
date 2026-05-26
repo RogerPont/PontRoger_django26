@@ -6,11 +6,7 @@ class Author(models.Model):
     last_name = models.CharField(max_length=100)
     email_address = models.EmailField()
 
-    def get_post_count(self):
-        """
-        Returns the number of posts published by this author.
-        This is a project requirement for the video presentation.
-        """
+    def post_count(self):
         return self.posts.count()
 
     def __str__(self):
