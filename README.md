@@ -1,4 +1,4 @@
-# RogerPont DevBlog - Django Project
+# RogerPont - Django Project
 
 Benvingut al repositori del **Projecte Django Blog** per a la unitat de Programació Orientada a Objectes (POO) i introducció a la persistència en BD. Aquest projecte és un blog de desenvolupament web dissenyat amb una interfície elegant de tipus dark mode glassmorphic, que integra una base de dades SQLite totalment estructurada i automatització CI/CD.
 
